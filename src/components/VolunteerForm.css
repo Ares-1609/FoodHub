@@ -1,37 +1,48 @@
 :root {
   --primary-color: #2e8b57;
+  --secondary-color: #ff8c66;
+  --accent-color: #fcb69f;
   --text-color: #333;
   --background-color: #f9f9f9;
   --success-color: #3cb371;
   --info-text-color: #555;
+  --input-border-color: #ddd;
+  --input-focus-border-color: #2e8b57;
+  --button-hover-color: #3cb371;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .volunteer-section {
-  background-color: white;
-  padding: 20px 10px;
+  background-color: var(--background-color);
+  padding: 40px 20px;
 }
 
 .volunteer-container {
   display: flex;
-  justify-content: flex-end;
-  gap: 20px;
-  max-width: 1800px;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
   margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 .volunteer-info {
-  padding-right: 10px;
+  flex: 1;
   text-align: left;
-  font-family: 'Georgia', serif; /* Use a more elegant font */
+  font-family: 'Georgia', serif;
   color: var(--info-text-color);
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: var(--box-shadow);
 }
 
 .volunteer-info h3 {
   color: var(--primary-color);
-  margin-bottom: 10px;
-  margin-top: 10px;
-  font-size: 1.5rem; /* Increase font size */
-  font-weight: bold; /* Make the heading bold */
+  margin-bottom: 15px;
+  margin-top: 15px;
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
 .volunteer-info h3:first-child {
@@ -39,70 +50,73 @@
 }
 
 .volunteer-info ul {
-  padding-left: 20px; /* Increase padding */
-  margin-top: 10px; /* Increase margin */
-  list-style-type: disc; /* Ensure bullets are visible */
+  padding-left: 20px;
+  margin-top: 15px;
+  list-style-type: disc;
 }
 
 .volunteer-info li {
-  margin-bottom: 8px; /* Increase margin */
-  font-size: 1.1rem; /* Increase font size */
-  line-height: 1.6; /* Increase line height for better readability */
-  color: var(--text-color); /* Use a different color for list items */
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-color);
 }
 
 .volunteer-form-container {
-  background-color: var(--background-color);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  background-color: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: var(--box-shadow);
   text-align: left;
-  width: 600px; /* Set a wider fixed width */
-  height: auto; /* Adjust height as needed */
-  margin-left: auto; /* Align to the right */
+  max-width: 600px;
+  width: 100%;
 }
 
 .volunteer-form-container h2 {
   color: var(--primary-color);
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .volunteer-form-container form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 
 .volunteer-form-container input,
 .volunteer-form-container textarea,
 .volunteer-form-container select {
-  padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  padding: 12px;
+  border: 1px solid var(--input-border-color);
+  border-radius: 8px;
   font-size: 1rem;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .volunteer-form-container input:focus,
 .volunteer-form-container textarea:focus,
 .volunteer-form-container select:focus {
-  border-color: var(--primary-color);
+  border-color: var(--input-focus-border-color);
   outline: none;
+  box-shadow: 0 0 5px rgba(46, 139, 87, 0.5);
 }
 
 .volunteer-form-container button {
   background-color: var(--primary-color);
   color: white;
-  padding: 10px 20px;
+  padding: 15px;
   border: none;
-  border-radius: 4px;
-  font-size: 1rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
 }
 
 .volunteer-form-container button:hover {
-  background-color: var(--success-color);
+  background-color: var(--button-hover-color);
   transform: scale(1.05);
 }
 
@@ -110,7 +124,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .checkbox-label {
@@ -121,7 +135,7 @@
 }
 
 .checkbox-label input {
-  margin-right: 8px;
+  margin-right: 10px;
 }
 
 .form-success {
@@ -141,7 +155,6 @@
   }
 
   .volunteer-info {
-    padding-right: 0;
     margin-bottom: 20px;
   }
 

@@ -62,4 +62,3 @@ function DonationListings({ donations }) {
 }
 
 export default DonationListings
-

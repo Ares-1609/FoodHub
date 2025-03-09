@@ -1,12 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
+:root {
+  --primary-color: #D4A373; /* Soft beige */
+  --secondary-color: #A98467; /* Warm brown */
+  --accent-color: #F5CBA7; /* Light peach */
+  --background-color: #F8F9FA; /* Light gray background */
+  --text-color: #2C3E50; /* Dark blue-gray text */
+  --info-color: #E6E6E6; /* Light gray */
+  --success-color: #3CB371; /* Medium sea green */
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  --box-shadow-hover: 0 6px 16px rgba(0, 0, 0, 0.06);
+  --hover-color: #DADADA; /* Light gray for hover */
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f8f5;
-  color: #333;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  transition: background-color 0.3s ease;
+  line-height: 1.6;
 }
 
 .app {
@@ -14,31 +31,52 @@ body {
   flex-direction: column;
   flex-grow: 1;
   text-align: center;
-}
-
-header {
-  background-color: #2e8b57;
-  color: white;
   padding: 20px;
 }
 
-.hero {
-  background-color: #3cb371;
+header {
+  background-color: rgb(215, 215, 187) !important;
   color: white;
-  padding: 50px 20px;
+  padding: 20px;
+  transition: background 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+header:hover {
+  background-color: rgba(7, 155, 7, 0.756) !important;
+}
+.hero {
+  background-color: #f0f8f5;
+  padding: 60px 0px !important;
+}
+.hero-container {
+  background-color: rgb(215, 215, 187); /* Beige */
+  color: white;
+  padding: 50px 40px;
+  width: 120%; /* Increase the width */
+  transition: background 0.3s ease;
+}
+
+.hero-container:hover {
+  background-color: rgba(7, 155, 7, 0.756);
 }
 
 .donation-listings {
   background-color: white;
-  padding: 20px;
+  padding: 25px;
   margin: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: var(--box-shadow);
+  transition: box-shadow 0.3s ease;
+}
+
+.donation-listings:hover {
+  box-shadow: var(--box-shadow-hover);
 }
 
 .donation-listing {
-  border-bottom: 1px solid #ddd;
-  padding: 10px 0;
+  border-bottom: 1px solid #E6E9ED;
+  padding: 15px 0;
 }
 
 .donation-listing:last-child {
@@ -47,27 +85,53 @@ header {
 
 .map {
   margin: 20px 0;
+  height: 400px;
+  width: 100%;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
 }
 
 .volunteer-form {
-  background-color: #2e8b57;
-  color: white;
-  padding: 20px;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  padding: 30px;
   margin: 20px;
-  border-radius: 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: var(--box-shadow);
+}
+
+.volunteer-form:hover {
+  background-color: #F7D7C4;
+  box-shadow: var(--box-shadow-hover);
 }
 
 .awareness-section {
-  background-color: #3cb371;
-  color: white;
-  padding: 20px;
+  background-color: var(--info-color);
+  color: var(--text-color);
+  padding: 30px;
   margin: 20px;
-  border-radius: 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: var(--box-shadow);
+}
+
+.awareness-section:hover {
+  background-color: var(--hover-color);
+  box-shadow: var(--box-shadow-hover);
 }
 
 footer {
-  background-color: #2e8b57;
+  background-color: var(--primary-color);
   color: white;
-  padding: 10px;
+  padding: 15px;
   margin-top: auto;
+  transition: background 0.3s ease;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+}
+
+footer:hover {
+  background-color: rgb(70, 69, 69); /* Light gray */
 }

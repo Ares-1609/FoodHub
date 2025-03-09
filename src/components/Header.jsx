@@ -1,6 +1,8 @@
 "use client"
 
 import { useState } from "react"
+import { Link } from "react-router-dom"
+import { HashLink } from "react-router-hash-link"
 import "./Header.css"
 
 function Header() {
@@ -22,19 +24,19 @@ function Header() {
         <nav className={`nav ${menuOpen ? "active" : ""}`}>
           <ul className="nav-list">
             <li>
-              <a href="#home">Home</a>
+              <HashLink smooth to="/#home">Home</HashLink>
             </li>
             <li>
-              <a href="#donations">Donations</a>
+              <HashLink smooth to="/#donations">Donations</HashLink>
             </li>
             <li>
-              <a href="#map">Map</a>
+              <HashLink smooth to="/#map">Map</HashLink>
             </li>
             <li>
-              <a href="#volunteer">Volunteer</a>
+              <Link to="/volunteer">Volunteer</Link>
             </li>
             <li>
-              <a href="#awareness">Impact</a>
+              <HashLink smooth to="/#awareness">Impact</HashLink>
             </li>
           </ul>
         </nav>
@@ -44,4 +46,3 @@ function Header() {
 }
 
 export default Header
-

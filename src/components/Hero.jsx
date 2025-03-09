@@ -5,6 +5,7 @@ import "./Hero.css";
 import poor1 from "./poor1.jpg";
 import poor2 from "./poor2.webp";
 import poor3 from "./poor3.webp";
+import Landing from "./Landing"
 
 function Hero() {
   // Debugging: Log the imported image paths
@@ -16,7 +17,8 @@ function Hero() {
     <section className="hero" id="home">
       <div className="container hero-container">
         <div className="hero-content">
-          <h1>Rescue Food, Feed Communities</h1>
+          {/* <h1>Rescue Food, Feed Communities</h1> */}
+          <Landing /> 
           <p>
             Connecting surplus food with those who need it most. Join our mission to reduce food waste and fight hunger
             in our communities.

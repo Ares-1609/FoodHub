@@ -11,10 +11,11 @@
   gap: 20px;
   max-width: 1850px;
   margin: 0 auto;
+  margin-top: -50px;
 }
 
 .hero-content {
-  max-width: 600px;
+  max-width: 950px;
   text-align: left;
 }
 

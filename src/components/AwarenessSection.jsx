@@ -1,7 +1,7 @@
-"use client"
-
 import { useState } from "react"
 import "./AwarenessSection.css"
+import communityImage from "./community_1.jpeg"
+import grocery from "./grocery.jpg"
 
 function AwarenessSection() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -19,14 +19,14 @@ function AwarenessSection() {
       title: "Community Garden Shares Harvest",
       content:
         "Volunteers from the community garden donated fresh produce weekly, providing nutritious options for local food banks.",
-      image: "/placeholder.svg?height=300&width=400",
+      image: communityImage.src,
     },
     {
       id: 3,
       title: "Grocery Store Reduces Waste by 75%",
       content:
         "Through our program, a local grocery chain has dramatically reduced their food waste while supporting vulnerable populations.",
-      image: "/placeholder.svg?height=300&width=400",
+      image: grocery.src,
     },
   ]
 
@@ -121,4 +121,3 @@ function AwarenessSection() {
 }
 
 export default AwarenessSection
-

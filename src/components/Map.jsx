@@ -131,7 +131,7 @@ function Map() {
               </Marker>
             ))}
           </MapContainer>
-          <div className="map-legend">
+          {/* <div className="map-legend">
             <div className="legend-item">
               <span className="legend-marker donor"></span>
               <span>Donors</span>
@@ -144,9 +144,9 @@ function Map() {
               <span className="legend-marker pantry"></span>
               <span>Community Pantries</span>
             </div>
-          </div>
+          </div> */}
         </div>
-        <div className="map-fallback">
+        {/* <div className="map-fallback">
           <p>
             For demonstration purposes, this is a map placeholder. In a real application, you would need to add your
             Google Maps API key.
@@ -159,7 +159,7 @@ function Map() {
               </li>
             ))}
           </ul>
-        </div>
+        </div> */}
       </div>
     </section>
   )

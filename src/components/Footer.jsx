@@ -1,3 +1,4 @@
+import { HashLink as Link } from "react-router-hash-link"
 import "./Footer.css"
 
 function Footer() {
@@ -31,19 +32,19 @@ function Footer() {
             <h3>Quick Links</h3>
             <ul>
               <li>
-                <a href="#home">Home</a>
+                <Link to="/#home">Home</Link>
               </li>
               <li>
-                <a href="#donations">Donations</a>
+                <Link to="/#donations">Donations</Link>
               </li>
               <li>
-                <a href="#map">Map</a>
+                <Link to="/#map">Map</Link>
               </li>
               <li>
-                <a href="#volunteer">Volunteer</a>
+                <Link to="/#volunteer">Volunteer</Link>
               </li>
               <li>
-                <a href="#awareness">Impact</a>
+                <Link to="/#awareness">Impact</Link>
               </li>
             </ul>
           </div>
@@ -65,7 +66,7 @@ function Footer() {
         <div className="footer-bottom">
           <p>&copy; {new Date().getFullYear()} Food Rescue Hub. All rights reserved.</p>
           <p>
-            <a href="#">Privacy Policy</a> |<a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
           </p>
         </div>
       </div>
@@ -74,4 +75,3 @@ function Footer() {
 }
 
 export default Footer
-

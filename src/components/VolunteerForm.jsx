@@ -68,7 +68,13 @@ function VolunteerForm() {
             <h3>Why Volunteer?</h3>
             <p>
               By volunteering with Food Rescue Hub, you're making a direct impact on reducing food waste and helping
-              those in need in your community.
+              those in need in your community. Your efforts will not only provide meals to those who are hungry but also
+              contribute to a more sustainable environment by reducing food waste.
+            </p>
+            <p>
+              Volunteering is a rewarding experience that allows you to connect with like-minded individuals, develop new
+              skills, and make a tangible difference in your community. Whether you have a few hours a week or can commit
+              to a regular schedule, your contribution is invaluable.
             </p>
             <h3>What You Can Do</h3>
             <ul>
@@ -76,7 +82,25 @@ function VolunteerForm() {
               <li>Help sort and organize at food banks</li>
               <li>Assist with community outreach</li>
               <li>Contribute to awareness campaigns</li>
+              <li>Support administrative tasks</li>
+              <li>Participate in fundraising events</li>
             </ul>
+            <h3>Benefits of Volunteering</h3>
+            <p>
+              Volunteering with Food Rescue Hub offers numerous benefits, including:
+            </p>
+            <ul>
+              <li>Gaining valuable experience and skills</li>
+              <li>Building a network of like-minded individuals</li>
+              <li>Making a positive impact in your community</li>
+              <li>Enhancing your resume and career prospects</li>
+              <li>Experiencing personal growth and fulfillment</li>
+            </ul>
+            <h3>Join Us Today!</h3>
+            <p>
+              No matter your background or experience, there is a role for you at Food Rescue Hub. Join us in our mission
+              to create a world where no food goes to waste and everyone has access to nutritious meals.
+            </p>
           </div>
 
           <div className="volunteer-form-container">
@@ -217,4 +241,3 @@ function VolunteerForm() {
 }
 
 export default VolunteerForm
-
