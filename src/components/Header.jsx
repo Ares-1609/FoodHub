@@ -4,13 +4,16 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 import { HashLink } from "react-router-hash-link"
 import "./Header.css"
-
+import logo from "./icon_png.png"
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
     <header className="header">
       <div className="container header-container">
+      <div className="logo1">
+          <img src={logo.src} alt="FoodHub Logo" />
+        </div>
         <div className="logo">
           <h1>FoodHub</h1>
         </div>
