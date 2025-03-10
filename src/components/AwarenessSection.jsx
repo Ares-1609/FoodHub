@@ -12,7 +12,7 @@ function AwarenessSection() {
       title: "Local Restaurant Saves 500kg of Food",
       content:
         "A downtown restaurant partnered with us to donate their surplus food, helping feed over 200 families in need last month.",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "https://www.fidelity.com/bin-public/600_Fidelity_Com_English/images/learning-center/heros/how-to-save-money-when-dining-out_1171787426_banner.png",
     },
     {
       id: 2,

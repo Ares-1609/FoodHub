@@ -21,7 +21,7 @@ const donations = [
     expiry: "2024-03-15",
     location: "Downtown Market",
     type: "Vegetables",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "https://cdn.britannica.com/17/196817-159-9E487F15/vegetables.jpg",
   },
   {
     id: 2,
@@ -31,7 +31,7 @@ const donations = [
     expiry: "2024-03-12",
     location: "Sunshine Bakery",
     type: "Bakery",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "https://breadandcie.com/wp-content/uploads/2021/07/Assorted-Croissant-2-gourmet-bread-and-cie-1920.jpg",
   },
   {
     id: 3,
@@ -41,7 +41,7 @@ const donations = [
     expiry: "2025-01-01",
     location: "Community Pantry",
     type: "Canned",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "https://www.foodrepublic.com/img/gallery/13-simple-ingredients-that-take-canned-beans-from-boring-to-brilliant/l-intro-1704221981.jpg",
   },
   {
     id: 4,
@@ -51,7 +51,7 @@ const donations = [
     expiry: "2024-03-10",
     location: "Green Grocery",
     type: "Dairy",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "https://m.economictimes.com/thumb/msid-66601972,width-1200,height-900,resizemode-4,imgsize-578438/milk-and-cheese.jpg",
   },
   {
     id: 5,
@@ -61,7 +61,7 @@ const donations = [
     expiry: "2024-03-20",
     location: "Downtown Market",
     type: "Vegetables",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "https://www.homemadeinterest.com/wp-content/uploads/2022/05/Tomato-Cucumber-Salad_2022_IG-2-1.jpg",
   },
   {
     id: 6,
@@ -71,7 +71,7 @@ const donations = [
     expiry: "2024-03-14",
     location: "Sunshine Bakery",
     type: "Bakery",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "https://img.freepik.com/premium-photo/breads-assorted-types-brazilian-breads-bakery-products_491130-2706.jpg",
   },
   {
     id: 7,
@@ -81,7 +81,7 @@ const donations = [
     expiry: "2025-02-01",
     location: "Community Pantry",
     type: "Canned",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "https://www.allrecipes.com/thmb/iOFPQXgs7htNg1yXWSfaKGy1nq8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/ar-canned-Chicken-Noodle-Soup-taste-test-campbells-chunky-e57de7273c1b490dbdd461b854c5182e.jpg",
   },
   {
     id: 8,
@@ -91,7 +91,7 @@ const donations = [
     expiry: "2024-03-11",
     location: "Green Grocery",
     type: "Dairy",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXzARbPG-F5FycpJv4HL--_0rnFShAGrSIcw&s",
   },
 ]
 
