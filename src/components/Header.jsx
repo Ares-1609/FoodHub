@@ -12,7 +12,7 @@ function Header() {
     <header className="header">
       <div className="container header-container">
         <div className="logo">
-          <h1>Food Rescue Hub</h1>
+          <h1>FoodHub</h1>
         </div>
 
         <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
@@ -37,6 +37,9 @@ function Header() {
             </li>
             <li>
               <HashLink smooth to="/#awareness">Impact</HashLink>
+            </li>
+            <li>
+              <Link to="/supportus">Support Us</Link>
             </li>
           </ul>
         </nav>

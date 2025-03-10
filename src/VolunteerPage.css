@@ -2,6 +2,11 @@
   position: relative;
   overflow: hidden;
 }
+.volunteer-page h1 {
+  font-size: 40px;
+  font-weight: bold;
+  
+}
 
 .particles-background {
   position: absolute;

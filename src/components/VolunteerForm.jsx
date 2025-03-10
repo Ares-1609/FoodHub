@@ -60,6 +60,9 @@ function VolunteerForm() {
 
   return (
     <section className="section volunteer-section" id="volunteer">
+      <div class="shape-circle1"></div>
+      <div class="shape-circle2"></div>
+      <div class="shape-circle3"></div>
       <div className="container">
         <h2 className="section-title">Become a Volunteer</h2>
 
@@ -178,7 +181,7 @@ function VolunteerForm() {
                         checked={formData.interests.includes("food-pickup")}
                         onChange={handleCheckboxChange}
                       />
-                      Food Pickup & Delivery
+                      Pickup
                     </label>
 
                     <label className="checkbox-label">
@@ -189,7 +192,7 @@ function VolunteerForm() {
                         checked={formData.interests.includes("sorting")}
                         onChange={handleCheckboxChange}
                       />
-                      Sorting & Organizing
+                      Organizing
                     </label>
 
                     <label className="checkbox-label">
@@ -200,7 +203,7 @@ function VolunteerForm() {
                         checked={formData.interests.includes("outreach")}
                         onChange={handleCheckboxChange}
                       />
-                      Community Outreach
+                      Outreach
                     </label>
 
                     <label className="checkbox-label">
@@ -211,7 +214,7 @@ function VolunteerForm() {
                         checked={formData.interests.includes("admin")}
                         onChange={handleCheckboxChange}
                       />
-                      Administrative Support
+                      Support
                     </label>
                   </div>
                 </div>

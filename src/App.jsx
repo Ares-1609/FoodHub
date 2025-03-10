@@ -8,6 +8,7 @@ import VolunteerForm from "./components/VolunteerForm"
 import AwarenessSection from "./components/AwarenessSection"
 import Footer from "./components/Footer"
 import VolunteerPage from "./VolunteerPage"
+import SupportUs from "./SupportUs"
 import "./App.css"
 
 // Sample data
@@ -118,6 +119,7 @@ function App() {
             </>
           } />
           <Route path="/volunteer" element={<VolunteerPage />} />
+          <Route path="/supportus" element={<SupportUs />} />
         </Routes>
       </div>
     </Router>

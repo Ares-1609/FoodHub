@@ -7,23 +7,23 @@ function Footer() {
       <div className="container">
         <div className="footer-content">
           <div className="footer-section about">
-            <h3>Food Rescue Hub</h3>
+            <h3>FoodHub</h3>
             <p>
               Connecting surplus food with those who need it most. Join our mission to reduce food waste and fight
               hunger in our communities.
             </p>
             <div className="social-links">
               <a href="#" aria-label="Facebook">
-                <i className="social-icon facebook"></i>
+                <i className="fab fa-facebook-f"></i>
               </a>
               <a href="#" aria-label="Twitter">
-                <i className="social-icon twitter"></i>
+                <i className="fab fa-twitter"></i>
               </a>
               <a href="#" aria-label="Instagram">
-                <i className="social-icon instagram"></i>
+                <i className="fab fa-instagram"></i>
               </a>
               <a href="#" aria-label="LinkedIn">
-                <i className="social-icon linkedin"></i>
+                <i className="fab fa-linkedin-in"></i>
               </a>
             </div>
           </div>
@@ -32,19 +32,22 @@ function Footer() {
             <h3>Quick Links</h3>
             <ul>
               <li>
-                <Link to="/#home">Home</Link>
+                <Link smooth to="/#home">Home</Link>
               </li>
               <li>
-                <Link to="/#donations">Donations</Link>
+                <Link smooth to="/#donations">Donations</Link>
               </li>
               <li>
-                <Link to="/#map">Map</Link>
+                <Link smooth to="/#map">Map</Link>
               </li>
               <li>
-                <Link to="/#volunteer">Volunteer</Link>
+                <Link smooth to="/volunteer">Volunteer</Link>
               </li>
               <li>
-                <Link to="/#awareness">Impact</Link>
+                <Link smooth to="/#awareness">Impact</Link>
+              </li>
+              <li>
+                <Link smooth to="/supportus">Support Us</Link>
               </li>
             </ul>
           </div>
@@ -52,13 +55,13 @@ function Footer() {
           <div className="footer-section contact">
             <h3>Contact Us</h3>
             <p>
-              <i className="contact-icon location"></i> 123 Food St, Rescue City
+              <i className="fas fa-map-marker-alt contact-icon location"></i> VIT Chennai, Mauritius
             </p>
             <p>
-              <i className="contact-icon phone"></i> (123) 456-7890
+              <i className="fas fa-phone contact-icon phone"></i> +91 8125783581
             </p>
             <p>
-              <i className="contact-icon email"></i> info@foodrescuehub.org
+              <i className="fas fa-envelope contact-icon email"></i> info@foodrescuehub.org
             </p>
           </div>
         </div>

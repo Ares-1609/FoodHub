@@ -1,0 +1,670 @@
+/* SupportUs.css */
+:root {
+    --primary-color: #2a9d8f;
+    --secondary-color: #e76f51;
+    --accent-color: #f4a261;
+    --text-color: #264653;
+    --background-color: #f8f9fa;
+    --light-gray: #e9ecef;
+    --medium-gray: #ced4da;
+    --dark-gray: #6c757d;
+    --success-color: #40916c;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --card-gradient: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    --button-gradient: linear-gradient(135deg, #2a9d8f 0%, #40916c 100%);
+    --transition: all 0.3s ease;
+  }
+  
+  /* Main container */
+  .support-us-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Decorative food-themed background elements */
+  .support-us-container::before {
+    content: "🍎";
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    font-size: 100px;
+    opacity: 0.05;
+    transform: rotate(15deg);
+    z-index: 0;
+  }
+  
+  .support-us-container::after {
+    content: "🥦";
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    font-size: 100px;
+    opacity: 0.05;
+    transform: rotate(-15deg);
+    z-index: 0;
+  }
+  
+  /* Header section */
+  .support-us-header {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(42, 157, 143, 0.1) 0%, rgba(244, 162, 97, 0.1) 100%);
+    border-radius: 12px;
+  }
+  
+  .support-us-header h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .support-us-header h1::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    border-radius: 2px;
+  }
+  
+  .support-tagline {
+    font-size: 1.2rem;
+    color: var(--dark-gray);
+    margin-top: 20px;
+  }
+  
+  /* Main content layout */
+  .support-us-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .donation-impact-container {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .donation-form-container {
+    flex: 0 0 400px;
+  }
+  
+  /* Mission section */
+  .mission-section {
+    background: var(--card-gradient);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 30px;
+    border-left: 5px solid var(--primary-color);
+    transition: var(--transition);
+  }
+  
+  .mission-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .mission-section h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+  }
+  
+  .mission-section h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+    border-radius: 3px;
+  }
+  
+  .mission-images {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  .mission-image {
+    width: 50%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: var(--transition);
+  }
+  
+  .mission-image:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Impact section */
+  .impact-section {
+    margin-bottom: 30px;
+  }
+  
+  .impact-section h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+  }
+  
+  .impact-section h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+    border-radius: 3px;
+  }
+  
+  .impact-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .impact-card {
+    background: var(--card-gradient);
+    padding: 25px 20px;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .impact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .impact-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  }
+  
+  .impact-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .impact-card h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+  
+  .impact-card p {
+    color: var(--text-color);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  /* Food waste facts */
+  .food-waste-facts {
+    background: var(--card-gradient);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 30px;
+    border-left: 5px solid var(--secondary-color);
+    transition: var(--transition);
+  }
+  
+  .food-waste-facts:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .food-waste-facts h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+  }
+  
+  .food-waste-facts h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+    border-radius: 3px;
+  }
+  
+  .facts-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .facts-list li {
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .facts-list li::before {
+    content: "✦";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+  }
+  
+  .fact-highlight {
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+  
+  /* Testimonials section */
+  .testimonials-section {
+    margin-bottom: 30px;
+  }
+  
+  .testimonials-section h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+  }
+  
+  .testimonials-section h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+    border-radius: 3px;
+  }
+  
+  .testimonial {
+    background: var(--card-gradient);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 20px;
+    position: relative;
+    transition: var(--transition);
+  }
+  
+  .testimonial:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .testimonial::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 4rem;
+    color: rgba(42, 157, 143, 0.1);
+    font-family: Georgia, serif;
+    line-height: 1;
+  }
+  
+  .testimonial p {
+    font-style: italic;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .testimonial-author {
+    font-weight: 600;
+    color: var(--primary-color);
+    text-align: right;
+  }
+  
+  /* Donation form */
+  .donation-form {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 20px;
+    transition: var(--transition);
+    border-top: 5px solid var(--secondary-color);
+  }
+  
+  .donation-form:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  }
+  
+  .donation-form h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .donation-subtitle {
+    text-align: center;
+    color: var(--dark-gray);
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+  }
+  
+  .donation-type-selector {
+    display: flex;
+    margin-bottom: 20px;
+    background-color: var(--light-gray);
+    border-radius: 10px;
+    padding: 5px;
+  }
+  
+  .type-btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    background: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--dark-gray);
+    transition: var(--transition);
+  }
+  
+  .type-btn.selected {
+    background-color: white;
+    color: var(--primary-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .donation-amounts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .amount-btn {
+    padding: 15px;
+    border: 2px solid var(--light-gray);
+    background: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    transition: var(--transition);
+  }
+  
+  .amount-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+  }
+  
+  .amount-btn.selected {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+  }
+  
+  .custom-amount {
+    margin-bottom: 25px;
+  }
+  
+  .custom-amount label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 0.9rem;
+  }
+  
+  .custom-amount input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid var(--light-gray);
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: var(--transition);
+  }
+  
+  .custom-amount input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.2);
+  }
+  
+  /* Donation impact preview */
+  .donation-impact-preview {
+    background-color: rgba(42, 157, 143, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+  }
+  
+  .donation-impact-preview p {
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  
+  .highlight {
+    color: var(--primary-color);
+    font-weight: 700;
+  }
+  
+  .impact-preview-items {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .impact-preview-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .impact-preview-icon {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+  }
+  
+  .impact-preview-text {
+    font-size: 0.9rem;
+  }
+  
+  /* Donor info form */
+  .donor-info {
+    margin-bottom: 25px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 0.9rem;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--light-gray);
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: var(--transition);
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.2);
+  }
+  
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+  }
+  
+  .checkbox-group input {
+    width: auto;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .checkbox-group label {
+    margin-bottom: 0;
+    cursor: pointer;
+    font-weight: normal;
+  }
+  
+  /* Donation summary */
+  .donation-summary {
+    background-color: var(--light-gray);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+  }
+  
+  .donation-summary h3 {
+    margin-bottom: 15px;
+    color: var(--text-color);
+    font-size: 1.1rem;
+  }
+  
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+  }
+  
+  .summary-row.total {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid var(--medium-gray);
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+  
+  /* Donate button */
+  .donate-btn {
+    width: 100%;
+    padding: 16px;
+    background: var(--button-gradient);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .donate-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.15);
+  }
+  
+  .donate-btn:active {
+    transform: translateY(1px);
+  }
+  
+  .donate-btn::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+  }
+  
+  .donate-btn:focus:not(:active)::after {
+    animation: ripple 1s ease-out;
+  }
+  
+  @keyframes ripple {
+    0% {
+      transform: scale(0, 0);
+      opacity: 0.5;
+    }
+    100% {
+      transform: scale(20, 20);
+      opacity: 0;
+    }
+  }
+  
+  .donate-btn:disabled {
+    background: var(--medium-gray);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+  
+  /* Secure payment note */
+  .secure-payment {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--dark-gray);
+    margin-bottom: 10px;
+  }
+  
+  .secure-icon {
+    margin-right: 5px;
+  }
+  
+  /* Tax benefit note */
+  
