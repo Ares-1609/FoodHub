@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './SupportUs.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
-// import foodWasteImage from '../assets/food-waste.jpg'; // Add this image to your assets folder
-// import communityImage from '../assets/community.jpg'; // Add this image to your assets folder
+
 
 const SupportUs = () => {
   const [donationAmount, setDonationAmount] = useState(100);
@@ -16,7 +15,6 @@ const SupportUs = () => {
   const [paymentSuccess, setPaymentSuccess] = useState(false);
   const [donationType, setDonationType] = useState('oneTime');
 
-  // Load Razorpay script
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://checkout.razorpay.com/v1/checkout.js';
@@ -49,14 +47,13 @@ const SupportUs = () => {
     // Simulating a backend call
     setTimeout(() => {
       const options = {
-        key: 'YOUR_RAZORPAY_KEY_ID', // Replace with actual key in production
-        amount: donationAmount * 100, // Amount in paise
+        key: 'YOUR_RAZORPAY_KEY_ID', 
+        amount: donationAmount * 100, 
         currency: 'INR',
         name: 'FoodShare Connect',
         description: 'Donation to reduce food waste',
         image: 'https://example.com/your_logo.png',
         handler: function(response) {
-          // Handle successful payment
           setIsPaymentProcessing(false);
           setPaymentSuccess(true);
           console.log(response);
@@ -130,10 +127,6 @@ const SupportUs = () => {
               We connect restaurants, grocery stores, and individuals with excess food to local food banks 
               and people in need, reducing food waste while addressing food insecurity in our communities.
             </p>
-            <div className="mission-images">
-              {/* <img src={foodWasteImage} alt="Food waste reduction" className="mission-image" />
-              <img src={communityImage} alt="Community support" className="mission-image" /> */}
-            </div>
           </div>
 
           <div className="impact-section">

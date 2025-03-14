@@ -1,6 +1,6 @@
 :root {
-  --primary-color: #2e8b57; /* Define your primary color */
-  --text-color: #333; /* Define your text color */
+  --primary-color: #2e8b57;
+  --text-color: #333; 
 }
 
 .header {

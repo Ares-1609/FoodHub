@@ -89,7 +89,6 @@ function Map() {
     },
   ]
 
-  // Center the map on the average of all locations
   const avgLat = locations.reduce((sum, loc) => sum + loc.lat, 0) / locations.length
   const avgLng = locations.reduce((sum, loc) => sum + loc.lng, 0) / locations.length
 

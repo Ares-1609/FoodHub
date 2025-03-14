@@ -8,7 +8,6 @@ import poor3 from "./poor3.webp";
 import Landing from "./Landing"
 
 function Hero() {
-  // Debugging: Log the imported image paths
   console.log("poor1:", poor1);
   console.log("poor2:", poor2);
   console.log("poor3:", poor3);
@@ -17,14 +16,13 @@ function Hero() {
     <section className="hero" id="home">
       <div className="container hero-container">
         <div className="hero-content">
-          {/* <h1>Rescue Food, Feed Communities</h1> */}
           <Landing /> 
           <p>
             Connecting surplus food with those who need it most. Join our mission to reduce food waste and fight hunger
             in our communities.
           </p>
           <div className="hero-buttons">
-            <a href="#donations" className="btn">
+            <a href="/#donations" className="btn">
               Donate Food
             </a>
             <a href="#volunteer" className="btn btn-secondary">

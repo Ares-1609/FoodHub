@@ -21,7 +21,7 @@
   position: relative;
   z-index: 1;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.8); /* Optional: Add a semi-transparent background to make the text more readable */
+  background: rgba(255, 255, 255, 0.8); 
   border-radius: 8px;
   margin: 20px;
 }

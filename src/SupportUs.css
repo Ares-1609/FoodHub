@@ -15,7 +15,6 @@
     --transition: all 0.3s ease;
   }
   
-  /* Main container */
   .support-us-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -26,8 +25,7 @@
     position: relative;
     overflow: hidden;
   }
-  
-  /* Decorative food-themed background elements */
+
   .support-us-container::before {
     content: "🍎";
     position: absolute;
@@ -49,8 +47,7 @@
     transform: rotate(-15deg);
     z-index: 0;
   }
-  
-  /* Header section */
+
   .support-us-header {
     text-align: center;
     margin-bottom: 40px;
@@ -87,8 +84,7 @@
     color: var(--dark-gray);
     margin-top: 20px;
   }
-  
-  /* Main content layout */
+
   .support-us-content {
     display: flex;
     flex-wrap: wrap;
@@ -105,8 +101,7 @@
   .donation-form-container {
     flex: 0 0 400px;
   }
-  
-  /* Mission section */
+
   .mission-section {
     background: var(--card-gradient);
     padding: 30px;
@@ -160,8 +155,7 @@
   .mission-image:hover {
     transform: scale(1.05);
   }
-  
-  /* Impact section */
+
   .impact-section {
     margin-bottom: 30px;
   }
@@ -233,8 +227,7 @@
     font-size: 0.95rem;
     line-height: 1.5;
   }
-  
-  /* Food waste facts */
+
   .food-waste-facts {
     background: var(--card-gradient);
     padding: 30px;
@@ -296,7 +289,6 @@
     font-weight: 600;
   }
   
-  /* Testimonials section */
   .testimonials-section {
     margin-bottom: 30px;
   }
@@ -358,8 +350,7 @@
     color: var(--primary-color);
     text-align: right;
   }
-  
-  /* Donation form */
+
   .donation-form {
     background: white;
     padding: 30px;
@@ -471,8 +462,7 @@
     outline: none;
     box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.2);
   }
-  
-  /* Donation impact preview */
+
   .donation-impact-preview {
     background-color: rgba(42, 157, 143, 0.1);
     padding: 15px;
@@ -511,8 +501,7 @@
   .impact-preview-text {
     font-size: 0.9rem;
   }
-  
-  /* Donor info form */
+
   .donor-info {
     margin-bottom: 25px;
   }
@@ -563,7 +552,6 @@
     font-weight: normal;
   }
   
-  /* Donation summary */
   .donation-summary {
     background-color: var(--light-gray);
     padding: 15px;
@@ -592,7 +580,6 @@
     font-size: 1.1rem;
   }
   
-  /* Donate button */
   .donate-btn {
     width: 100%;
     padding: 16px;
@@ -653,8 +640,6 @@
     transform: none;
     box-shadow: none;
   }
-  
-  /* Secure payment note */
   .secure-payment {
     text-align: center;
     font-size: 0.85rem;
@@ -665,6 +650,4 @@
   .secure-icon {
     margin-right: 5px;
   }
-  
-  /* Tax benefit note */
   

@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 
 const SplitText = ({
   text = 'Saving Surplus, Feeding Communities.',
-  className = 'font-quicksand', // Apply the new font class
+  className = 'font-quicksand',
   delay = 100,
   animationFrom = { opacity: 0, transform: 'translate3d(0,40px,0)' },
   animationTo = { opacity: 1, transform: 'translate3d(0,0,0)' },
