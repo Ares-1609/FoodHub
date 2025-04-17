@@ -1,7 +1,6 @@
-"use client"
-
-import { useState } from "react"
-import "./VolunteerForm.css"
+import React, { useState } from "react";
+import "./VolunteerForm.css";
+import LoginForm from "./LoginForm"
 
 function VolunteerForm() {
   const [formData, setFormData] = useState({
@@ -11,56 +10,76 @@ function VolunteerForm() {
     availability: "",
     interests: [],
     message: "",
-  })
+    password: "", // Added password field
+  });
 
-  const [submitted, setSubmitted] = useState(false)
+  const [submitted, setSubmitted] = useState(false);
+  const [showLogin, setShowLogin] = useState(false); // State to toggle forms
 
   const handleChange = (e) => {
-    const { name, value } = e.target
+    const { name, value } = e.target;
     setFormData({
       ...formData,
       [name]: value,
-    })
-  }
+    });
+  };
 
   const handleCheckboxChange = (e) => {
-    const { value, checked } = e.target
+    const { value, checked } = e.target;
     if (checked) {
       setFormData({
         ...formData,
         interests: [...formData.interests, value],
-      })
+      });
     } else {
       setFormData({
         ...formData,
         interests: formData.interests.filter((interest) => interest !== value),
-      })
+      });
     }
-  }
+  };
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log("Form submitted:", formData)
-    setSubmitted(true)
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-    setTimeout(() => {
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        availability: "",
-        interests: [],
-        message: "",
-      })
-      setSubmitted(false)
-    }, 3000)
-  }
+    try {
+      const response = await fetch("http://localhost:5000/api/volunteers", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        console.log("Form submitted successfully!");
+        setSubmitted(true);
+
+        setTimeout(() => {
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            availability: "",
+            interests: [],
+            message: "",
+            password: "", // Added password field
+          });
+          setSubmitted(false);
+        }, 3000);
+      } else {
+        console.error("Error submitting form");
+      }
+    } catch (error) {
+      console.error("Network error:", error);
+    }
+  };
 
   return (
     <section className="section volunteer-section" id="volunteer">
-      <div class="shape-circle1"></div>
-      <div class="shape-circle2"></div>
-      <div class="shape-circle3"></div>
+      <div className="shape-circle1"></div>
+      <div className="shape-circle2"></div>
+      <div className="shape-circle3"></div>
       <div className="container">
         <h2 className="section-title">Become a Volunteer</h2>
 
@@ -110,6 +129,8 @@ function VolunteerForm() {
                 <h3>Thank you for signing up!</h3>
                 <p>We'll contact you soon with more information.</p>
               </div>
+            ) : showLogin ? (
+              <LoginForm setShowLogin={setShowLogin} />
             ) : (
               <form className="volunteer-form" onSubmit={handleSubmit}>
                 <div className="form-group">
@@ -229,8 +250,28 @@ function VolunteerForm() {
                   ></textarea>
                 </div>
 
+                <div className="form-group">
+                  <label htmlFor="password">Password</label>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    className="form-control"
+                    value={formData.password}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+
                 <button type="submit" className="btn">
                   Sign Up as Volunteer
+                </button>
+                <button
+                  type="button"
+                  className="btn"
+                  onClick={() => setShowLogin(true)}
+                >
+                  Already a Volunteer? Login
                 </button>
               </form>
             )}
@@ -238,7 +279,7 @@ function VolunteerForm() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default VolunteerForm
+export default VolunteerForm;
