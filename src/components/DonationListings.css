@@ -98,3 +98,21 @@
   text-align: center;
   margin-top: 20px;
 }
+.donation-form {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.donation-form input,
+.donation-form select {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
