@@ -1,5 +1,7 @@
-import { HashLink as Link } from "react-router-hash-link"
-import "./Footer.css"
+"use client"; // <-- ADDED THIS
+
+import Link from "next/link"; // <-- CHANGED THIS
+import "./Footer.css";
 
 function Footer() {
   return (
@@ -32,22 +34,23 @@ function Footer() {
             <h3>Quick Links</h3>
             <ul>
               <li>
-                <Link smooth to="/#home">Home</Link>
+                {/* Changed "to" to "href" and removed "smooth" */}
+                <Link href="/#home">Home</Link>
               </li>
               <li>
-                <Link smooth to="/#donations">Donations</Link>
+                <Link href="/#donations">Donations</Link>
               </li>
               <li>
-                <Link smooth to="/#map">Map</Link>
+                <Link href="/#map">Map</Link>
               </li>
               <li>
-                <Link smooth to="/volunteer">Volunteer</Link>
+                <Link href="/volunteer">Volunteer</Link>
               </li>
               <li>
-                <Link smooth to="/#awareness">Impact</Link>
+                <Link href="/#awareness">Impact</Link>
               </li>
               <li>
-                <Link smooth to="/supportus">Support Us</Link>
+                <Link href="/supportus">Support Us</Link>
               </li>
             </ul>
           </div>
@@ -74,7 +77,7 @@ function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

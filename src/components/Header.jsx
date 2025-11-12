@@ -1,17 +1,22 @@
 "use client"
 
 import { useState } from "react"
-import { Link } from "react-router-dom"
-import { HashLink } from "react-router-hash-link"
+import Link from "next/link" // <-- CHANGED: Import from next/link
 import "./Header.css"
 import logo from "./icon_png.png"
+
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
+
+  // This function closes the menu when a link is clicked
+  const handleLinkClick = () => {
+    setMenuOpen(false);
+  }
 
   return (
     <header className="header">
       <div className="container header-container">
-      <div className="logo1">
+        <div className="logo1">
           <img src={logo.src} alt="FoodHub Logo" />
         </div>
         <div className="logo">
@@ -26,23 +31,24 @@ function Header() {
 
         <nav className={`nav ${menuOpen ? "active" : ""}`}>
           <ul className="nav-list">
+            {/* CHANGED: All links now use next/link and 'href' prop */}
             <li>
-              <HashLink smooth to="/#home">Home</HashLink>
+              <Link href="/#home" onClick={handleLinkClick}>Home</Link>
             </li>
             <li>
-              <HashLink smooth to="/#donations">Donations</HashLink>
+              <Link href="/#donations" onClick={handleLinkClick}>Donations</Link>
             </li>
             <li>
-              <HashLink smooth to="/#map">Map</HashLink>
+              <Link href="/#map" onClick={handleLinkClick}>Map</Link>
             </li>
             <li>
-              <Link to="/volunteer">Volunteer</Link>
+              <Link href="/volunteer" onClick={handleLinkClick}>Volunteer</Link>
             </li>
             <li>
-              <HashLink smooth to="/#awareness">Impact</HashLink>
+              <Link href="/#awareness" onClick={handleLinkClick}>Impact</Link>
             </li>
             <li>
-              <Link to="/supportus">Support Us</Link>
+              <Link href="/supportus" onClick={handleLinkClick}>Support Us</Link>
             </li>
           </ul>
         </nav>

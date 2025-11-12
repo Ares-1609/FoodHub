@@ -1,5 +1,7 @@
+"use client"; // <-- ADDED THIS
+
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // ✅ Import
+import { useRouter } from "next/navigation"; // <-- CHANGED THIS
 import "./VolunteerForm.css";
 
 function LoginForm({ setShowLogin }) {
@@ -9,7 +11,7 @@ function LoginForm({ setShowLogin }) {
   });
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
-  const navigate = useNavigate(); // ✅ Hook for navigation
+  const router = useRouter(); // <-- CHANGED THIS
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -37,9 +39,9 @@ function LoginForm({ setShowLogin }) {
         setErrorMessage("");
         setLoginFormData({ email: "", password: "" });
 
-        // ✅ Redirect to homepage after 1s
+        // Redirect to homepage after 1s
         setTimeout(() => {
-          navigate("/"); // This is the homepage route
+          router.push("/"); // <-- CHANGED THIS
         }, 1000);
       } else {
         setErrorMessage(data.message);

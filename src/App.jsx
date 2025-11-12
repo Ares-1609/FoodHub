@@ -1,15 +1,19 @@
 "use client"
-import { HashRouter as Router, Route, Routes, Navigate } from "react-router-dom"
+
+// 1. Import dynamic
+import dynamic from 'next/dynamic'
 import Header from "./components/Header"
 import Hero from "./components/Hero"
 import DonationListings from "./components/DonationListings"
-import Map from "./components/Map"
-import VolunteerForm from "./components/VolunteerForm"
 import AwarenessSection from "./components/AwarenessSection"
 import Footer from "./components/Footer"
-import VolunteerPage from "./VolunteerPage"
-import SupportUs from "./SupportUs"
 import "./App.css"
+
+// 2. Dynamically import Map (SupportUs and VolunteerPage are now separate pages)
+const Map = dynamic(() => import('./components/Map'), { 
+  ssr: false, // This is the fix!
+  loading: () => <p>Loading map...</p>
+})
 
 // Sample data
 const donations = [
@@ -102,27 +106,17 @@ const locations = [
   { id: 4, name: "Green Grocery", lat: 40.7138, lng: -74.003, type: "Donor" },
 ]
 
+// 3. This function now only displays the homepage content
 function App() {
   return (
-    <Router>
-      <div className="app">
-        <Routes>
-          <Route path="/" element={<Navigate to="/home" />} />
-          <Route path="/home" element={
-            <>
-              <Header />
-              <Hero />
-              <DonationListings donations={donations} />
-              <Map locations={locations} />
-              <AwarenessSection />
-              <Footer />
-            </>
-          } />
-          <Route path="/volunteer" element={<VolunteerPage />} />
-          <Route path="/supportus" element={<SupportUs />} />
-        </Routes>
-      </div>
-    </Router>
+    <div className="app">
+      <Header />
+      <Hero />
+      <DonationListings donations={donations} />
+      <Map locations={locations} />
+      <AwarenessSection />
+      <Footer />
+    </div>
   )
 }
 
