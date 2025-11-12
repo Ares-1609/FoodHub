@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json()); // Parses incoming JSON requests
 
 // Connect to MongoDB
-mongoose.connect("mongodb+srv://foodhub_user:<rakshit1234>@cluster0.feusx3o.mongodb.net/?appName=Cluster0", {
+mongoose.connect("mongodb+srv://foodhub_user:rakshit1234@cluster0.feusx3o.mongodb.net/?appName=Cluster0", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
