@@ -43,7 +43,7 @@ function VolunteerForm() {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5000/api/volunteers", {
+      const response = await fetch("http://3.236.193.139:5000/api/volunteers", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
